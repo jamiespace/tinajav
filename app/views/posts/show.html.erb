@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<% if @current_user %>
+<p>
+  <b>Id:</b>
+  <%= @post.id %>
+</p>
+<% end %>
+
+<div id="container">
+	<section id="content">
+		<div id="inner-content">
+			<h1><%= @post.title %></h1>			
+			<div id="posts">				
+					<div class="article">						
+						<section class="content summary">
+							<p><%= @post.content %></p>
+						</section>
+					</div>				
+			</div>
+			<div id="dsq-new-post" class="dsq-post-area dsq-unauthenticated">
+				<h3>Add New Comment</h3>
+				<form>	
+					<textarea class="" style="resize: none; overflow-y: hidden; height: 93px; "></textarea><textarea class="placeholder" style="resize: none; overflow-y: hidden; position: absolute; top: 0px; left: -9999px; width: 646px; line-height: normal; text-decoration: none; letter-spacing: normal; height: 93px; " tabindex="-1"></textarea>
+				</form>
+			</div>
+		</div>
+	</section>	
+</div>
+
+
+<% if @current_user %>
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+<% end %>

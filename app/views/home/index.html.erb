@@ -1,0 +1,17 @@
+<div id="container">
+	<section id="content">
+		<div id="inner-content">
+			<h1>Recently Posted</h1>			
+			<div id="posts">
+				<% for post in @posts %>
+					<div class="article">
+						<h2 class="post-title"><%= link_to post.title, post_path(post.id) %></h2>
+						<section class="content summary">
+							<p length="80%"><%= simple_format(truncate(post.content, :length => 500)) %></p>
+						</section>
+					</div>					
+				<% end %>
+			</div>
+			</div>
+	</section>
+</div>
