@@ -30,6 +30,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # end
 
  gem 'hirb'
+ gem 'ruby-prof'
 
 group :development, :test do
   gem "mongrel"

@@ -12385,3 +12385,927 @@ Started GET "/posts/2" for 127.0.0.1 at Wed Jan 05 00:31:12 +0700 2011
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
 Rendered posts/show.html.erb within layouts/application (5.9ms)
 Completed 200 OK in 25ms (Views: 10.1ms | ActiveRecord: 0.9ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreatePosts (20101211175600)
+Migrating to AddSessionsTable (20110101083457)
+Migrating to CreateUsers (20110101151530)
+  [1m[35mSQL (17.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.7ms)[0m  PRAGMA index_list("posts")
+  [1m[36mSQL (0.2ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35mSQL (0.2ms)[0m  PRAGMA index_info('index_sessions_on_updated_at')
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_info('index_sessions_on_session_id')[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+
+
+Started GET "/" for 127.0.0.1 at Fri Jan 07 12:01:40 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (140.1ms)
+Completed 200 OK in 254ms (Views: 148.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 12:01:43 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 54ms (Views: 20.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at Fri Jan 07 12:01:46 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 2) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 63ms (Views: 24.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jan 07 12:01:54 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 35ms (Views: 23.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jan 07 12:01:55 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 42ms (Views: 27.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jan 07 12:01:56 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 38ms (Views: 23.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jan 07 12:01:56 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 30ms (Views: 19.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 12:01:56 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 45ms (Views: 17.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jan 07 12:02:04 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 37ms (Views: 25.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jan 07 13:51:02 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 215ms (Views: 75.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 13:51:04 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 240ms (Views: 22.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 13:51:16 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 50ms (Views: 19.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 13:51:17 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 53ms (Views: 18.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:13:32 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 303ms (Views: 29.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:30:07 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (110.0ms)
+Completed   in 361ms
+
+ActionView::Template::Error (Missing partial posts/postcomments with {:handlers=>[:rjs, :rhtml, :erb, :rxml, :builder], :locale=>[:en, :en], :formats=>[:html]} in view paths "/home/trungtin/works/tinajav/app/views"):
+    20: 			</div>			
+    21: 		</div>
+    22: 	</section>
+    23:   <%= render 'postcomments'	%>
+    24: </div>
+    25: 
+    26: 
+  app/views/posts/show.html.erb:23:in `_app_views_posts_show_html_erb__518836939__616171568_0'
+  app/controllers/posts_controller.rb:18:in `show'
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.0ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:31:41 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (8.3ms)
+Completed   in 48ms
+
+ActionView::Template::Error (Missing partial posts/postcomments with {:handlers=>[:rjs, :rhtml, :erb, :rxml, :builder], :locale=>[:en, :en], :formats=>[:html]} in view paths "/home/trungtin/works/tinajav/app/views"):
+    20: 			</div>			
+    21: 		</div>
+    22: 	</section>
+    23:   <%= render 'postcomments'	%>
+    24: </div>
+    25: 
+    26: 
+  app/views/posts/show.html.erb:23:in `_app_views_posts_show_html_erb__518836939__617125918_0'
+  app/controllers/posts_controller.rb:18:in `show'
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.0ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.8ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:31:41 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (10.0ms)
+Completed   in 34ms
+
+ActionView::Template::Error (Missing partial posts/postcomments with {:handlers=>[:rjs, :rhtml, :erb, :rxml, :builder], :locale=>[:en, :en], :formats=>[:html]} in view paths "/home/trungtin/works/tinajav/app/views"):
+    20: 			</div>			
+    21: 		</div>
+    22: 	</section>
+    23:   <%= render 'postcomments'	%>
+    24: </div>
+    25: 
+    26: 
+  app/views/posts/show.html.erb:23:in `_app_views_posts_show_html_erb__518836939__615916578_0'
+  app/controllers/posts_controller.rb:18:in `show'
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.3ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:31:42 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (8.3ms)
+Completed   in 46ms
+
+ActionView::Template::Error (Missing partial posts/postcomments with {:handlers=>[:rjs, :rhtml, :erb, :rxml, :builder], :locale=>[:en, :en], :formats=>[:html]} in view paths "/home/trungtin/works/tinajav/app/views"):
+    20: 			</div>			
+    21: 		</div>
+    22: 	</section>
+    23:   <%= render 'postcomments'	%>
+    24: </div>
+    25: 
+    26: 
+  app/views/posts/show.html.erb:23:in `_app_views_posts_show_html_erb__518836939__616656788_0'
+  app/controllers/posts_controller.rb:18:in `show'
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.7ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:31:42 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (9.5ms)
+Completed   in 47ms
+
+ActionView::Template::Error (Missing partial posts/postcomments with {:handlers=>[:rjs, :rhtml, :erb, :rxml, :builder], :locale=>[:en, :en], :formats=>[:html]} in view paths "/home/trungtin/works/tinajav/app/views"):
+    20: 			</div>			
+    21: 		</div>
+    22: 	</section>
+    23:   <%= render 'postcomments'	%>
+    24: </div>
+    25: 
+    26: 
+  app/views/posts/show.html.erb:23:in `_app_views_posts_show_html_erb__518836939__617472518_0'
+  app/controllers/posts_controller.rb:18:in `show'
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.6ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:31:43 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (5.6ms)
+Completed   in 30ms
+
+ActionView::Template::Error (Missing partial posts/postcomments with {:handlers=>[:rjs, :rhtml, :erb, :rxml, :builder], :locale=>[:en, :en], :formats=>[:html]} in view paths "/home/trungtin/works/tinajav/app/views"):
+    20: 			</div>			
+    21: 		</div>
+    22: 	</section>
+    23:   <%= render 'postcomments'	%>
+    24: </div>
+    25: 
+    26: 
+  app/views/posts/show.html.erb:23:in `_app_views_posts_show_html_erb__518836939__616107258_0'
+  app/controllers/posts_controller.rb:18:in `show'
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.8ms)
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:32:42 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_post_comments.html.erb (0.8ms)
+Rendered posts/show.html.erb within layouts/application (88.3ms)
+Completed 200 OK in 141ms (Views: 98.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:33:18 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_post_comments.html.erb (0.5ms)
+Rendered posts/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 115ms (Views: 15.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:33:19 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_post_comments.html.erb (0.7ms)
+Rendered posts/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 54ms (Views: 21.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:35:06 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_post_comments.html.erb (0.7ms)
+Rendered posts/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 54ms (Views: 22.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:35:07 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_post_comments.html.erb (0.7ms)
+Rendered posts/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 141ms (Views: 23.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:35:07 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_post_comments.html.erb (0.7ms)
+Rendered posts/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 57ms (Views: 24.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:35:08 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_post_comments.html.erb (0.5ms)
+Rendered posts/show.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 83ms (Views: 42.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 14:35:08 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_post_comments.html.erb (0.5ms)
+Rendered posts/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 34ms (Views: 14.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:00:56 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.8ms)
+Rendered posts/_post_comments.html.erb (3.9ms)
+Rendered posts/show.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 288ms (Views: 60.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:12:12 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.8ms)
+Rendered posts/_post_comments.html.erb (4.0ms)
+Rendered posts/show.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 288ms (Views: 31.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:14:22 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.5ms)
+Rendered posts/_post_comments.html.erb (5.9ms)
+Rendered posts/show.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 78ms (Views: 46.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:14:23 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:14:23 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:16:35 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.7ms)
+Rendered posts/_post_comments.html.erb (3.7ms)
+Rendered posts/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 72ms (Views: 31.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:16:36 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:16:54 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:19:47 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.8ms)
+Rendered posts/_post_comments.html.erb (4.5ms)
+Rendered posts/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 110ms (Views: 31.4ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:19:48 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.5ms)
+Rendered posts/_post_comments.html.erb (2.7ms)
+Rendered posts/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 105ms (Views: 20.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:19:48 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:19:48 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:23:08 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.6ms)
+Rendered posts/_post_comments.html.erb (2.8ms)
+Rendered posts/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 93ms (Views: 28.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:23:08 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.5ms)
+Rendered posts/_post_comments.html.erb (2.6ms)
+Rendered posts/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 64ms (Views: 22.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:23:09 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (9.1ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:23:09 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jan 07 15:23:20 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 75ms (Views: 56.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/images/eoraptor/background.jpg?1287635661" for 127.0.0.1 at Fri Jan 07 15:23:21 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/eoraptor/background.jpg"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/images/eoraptor/blog-logo.png?1287635661" for 127.0.0.1 at Fri Jan 07 15:23:21 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/eoraptor/blog-logo.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/fonts/cartogothicstd-bold.woff?1287635661" for 127.0.0.1 at Fri Jan 07 15:23:21 +0700 2011
+
+ActionController::RoutingError (No route matches "/fonts/cartogothicstd-bold.woff"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/fonts/cartogothicstd-bold.ttf?1287635661" for 127.0.0.1 at Fri Jan 07 15:23:21 +0700 2011
+
+ActionController::RoutingError (No route matches "/fonts/cartogothicstd-bold.ttf"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/fonts/cartogothicstd-bold.svg" for 127.0.0.1 at Fri Jan 07 15:23:21 +0700 2011
+
+ActionController::RoutingError (No route matches "/fonts/cartogothicstd-bold.svg"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/images/eoraptor/background.jpg?1287635661" for 127.0.0.1 at Fri Jan 07 15:23:21 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/eoraptor/background.jpg"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/images/eoraptor/blog-logo.png?1287635661" for 127.0.0.1 at Fri Jan 07 15:23:22 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/eoraptor/blog-logo.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jan 07 15:23:36 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 37ms (Views: 24.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:23:38 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.8ms)
+Rendered posts/_post_comments.html.erb (4.3ms)
+Rendered posts/show.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 66ms (Views: 31.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:23:39 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:23:39 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:30:40 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (1.7ms)
+Rendered posts/_post_comments.html.erb (5.1ms)
+Rendered posts/show.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 237ms (Views: 37.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:30:41 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.7ms)
+Rendered posts/_post_comments.html.erb (3.9ms)
+Rendered posts/show.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 60ms (Views: 28.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:30:41 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:30:41 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:47:59 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (1.0ms)
+Rendered posts/_post_comments.html.erb (96.3ms)
+Rendered posts/show.html.erb within layouts/application (112.9ms)
+Completed 200 OK in 418ms (Views: 136.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:00 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.9ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:00 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/images/toolbar/toolbar-dropdown.png" for 127.0.0.1 at Fri Jan 07 15:48:00 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-dropdown.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:48:00 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:00 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/images/toolbar/toolbar-dropdown.png" for 127.0.0.1 at Fri Jan 07 15:48:00 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-dropdown.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:48:00 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:01 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:01 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:02 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:02 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:48:16 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.4ms)
+Rendered posts/_post_comments.html.erb (2.2ms)
+Rendered posts/show.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 39ms (Views: 15.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:17 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/images/toolbar/toolbar-dropdown.png" for 127.0.0.1 at Fri Jan 07 15:48:17 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-dropdown.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (102.1ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:48:17 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:17 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/images/toolbar/toolbar-dropdown.png" for 127.0.0.1 at Fri Jan 07 15:48:18 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-dropdown.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:48:18 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:18 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:18 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:18 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:48:18 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:50:52 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.8ms)
+Rendered posts/_post_comments.html.erb (5.5ms)
+Rendered posts/show.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 111ms (Views: 46.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:50:52 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.4ms)
+Rendered posts/_post_comments.html.erb (2.8ms)
+Rendered posts/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 37ms (Views: 16.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:50:53 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:50:53 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:50:54 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:50:54 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Fri Jan 07 15:58:05 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered posts/_text_area_comment.html.erb (0.7ms)
+Rendered posts/_post_comments.html.erb (5.5ms)
+Rendered posts/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 58ms (Views: 26.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/images/toolbar/toolbar-sprite.png" for 127.0.0.1 at Fri Jan 07 15:58:05 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/toolbar/toolbar-sprite.png"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/images/themes/narcissus/inputshadow.gif" for 127.0.0.1 at Fri Jan 07 15:58:06 +0700 2011
+
+ActionController::RoutingError (No route matches "/images/themes/narcissus/inputshadow.gif"):
+  
+
+Rendered /home/trungtin/.rvm/gems/ruby-1.8.7-p302@rails3/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
