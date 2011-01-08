@@ -13,23 +13,14 @@
           <div class="dsq-textarea">
             <%= render 'text_area_comment' %>
           </div>
+					<div class="dsq-post-footer">
+	          <div class="dsq-sharing-options dsq-tt" title="Toggle to share your comment"></div>
+		        <button type="button" class="dsq-button" id="dsq-post-button" onclick="DISQUS.dtpl.actions.fire('comments.send', null, this);"><span>Post as</span></button>
+			    </div>
         </div>		    
 	    </div>
     </div>
-  </div>
-  <script type="text/javascript">  
-  var disqus_shortname = 'tinajav';
-  // The following are highly recommended additional parameters. Remove the slashes in front to use.
-  // var disqus_identifier = 'unique_dynamic_id_1234';
-  // var disqus_url = 'http://example.com/permalink-to-page.html';
-
-  /* * * DON'T EDIT BELOW THIS LINE * * */
-  (function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-  </script>
+  </div>  
   <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
   

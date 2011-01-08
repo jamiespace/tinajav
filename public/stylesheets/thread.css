@@ -984,7 +984,7 @@ span.dsq-options-status {
     
 #dsq-content #dsq-global-toolbar .dsq-community-launcher {
     width: 23px;
-    background: url(../../images/toolbar/toolbar-sprite.png) -77px 0;
+    background: url(http://mediacdn.disqus.com/1294274648/images/toolbar/toolbar-sprite.png) -77px 0;
 }
 
     #dsq-content #dsq-global-toolbar .dsq-community-launcher:hover {
