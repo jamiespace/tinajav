@@ -1,24 +1,8 @@
 <section id="post-comments">
-  <div id="disqus_thread">
-    <div id="dsq-content" style="display:block;" class="clearfix">
-      <div id="dsq-global-toolbar" class="dsq-community-preview">
-        <table class="dsq-global-toolbar-container">
-          <tbody><tr>        <td class="dsq-global-toolbar-likes">                    <div class="dsq-group">            <a href="#" id="dsq-like-thread-button" class="dsq-thread-like toolbar-item  dsq-tt" onclick="DISQUS.dtpl.actions.fire('thread.vote', 1); return false;" original-title="I like this page">Like</a>            <a href="#" id="dsq-dislike-thread-button" class="dsq-thread-dislike toolbar-item  dsq-tt" onclick="DISQUS.dtpl.actions.fire('thread.vote', -1); return false" original-title="I don't like this page">Dislike</a>          </div>          <ul class="dsq-like-faces">                    <li class="dsq-tt" original-title="Prem Sichanugrist"><a href="http://disqus.com/sikachu/" onclick="return DISQUS.dtpl.actions.fire('profile.show', null, 'sikachu', false); return false"><img src="http://mediacdn.disqus.com/uploads/users/74/4332/avatar32.jpg?1265862494"></a></li>    <li class="dsq-like-activity">                  liked this.          </li>          </ul>                  </td>        <td>                        <a href="#" class="dsq-community-launcher toolbar-item dsq-tt" onclick="DISQUS.dtpl.actions.fire('community.show'); return false" original-title="Expand Community Box"> Community</a>                    </td>                <td class="dsq-global-toolbar-dropdown-container">              <div id="dsq-toolbar-dropdown">    <a href="#" onclick="return false" class="dsq-toolbar-logo toolbar-item">Disqus</a>    <div id="dsq-toolbar-dropdown-wrap" style="display: none">      <ul>                    <li><a href="http://disqus.com" target="_blank">About Disqus</a></li>      </ul>    </div>  </div>        </td>      </tr>    </tbody>
-        </table>
-      </div>    
-      <div id="dsq-new-post" class="dsq-post-area">
-		    <h3>Add New Comment</h3>
-        <div style="clear:both"></div>
-        <div id="dsq-form-area">
-          <div class="dsq-textarea">
-            <%= render 'text_area_comment' %>
-          </div>
-        </div>		    
-	    </div>
-    </div>
-  </div>
+  <div id="disqus_thread"></script>
   <script type="text/javascript">  
-  var disqus_shortname = 'tinajav';
+  var disqus_shortname = 'tinnguyenblog';
+  var disqus_developer = true;
   // The following are highly recommended additional parameters. Remove the slashes in front to use.
   // var disqus_identifier = 'unique_dynamic_id_1234';
   // var disqus_url = 'http://example.com/permalink-to-page.html';
@@ -32,6 +16,4 @@
   </script>
   <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  
-
 </section>
