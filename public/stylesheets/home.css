@@ -143,6 +143,61 @@ nav#header-menu ul li {
 	vertical-align: base-line;
 }
 
+footer nav ul {
+	border-top: .1em solid #333;
+	border-top-width: 0.1em;
+	border-top-style: solid;
+	border-top-color: #333;
+	border-bottom: .1em solid #333;
+	border-bottom-width: 0.1em;
+	border-bottom-style: solid;
+	border-bottom-color: #333;
+	margin: .5em 0;
+	margin-top: 0.5em;
+	margin-right: 0px;
+	margin-bottom: 0.5em;
+	margin-left: 0px;
+	padding: .5em 0;
+	padding-top: 0.5em;
+	padding-right: 0px;
+	padding-bottom: 0.5em;
+	padding-left: 0px;
+}
+
+footer nav ul li {
+	margin: 0 1em;
+	margin-top: 0px;
+	margin-right: 1em;
+	margin-bottom: 0px;
+	margin-left: 1em;
+	list-style: none;
+	list-style-type: none;
+	list-style-position: initial;
+	list-style-image: initial;
+	display: inline;
+}
+
+footer nav ul li a {
+	font-size: .9em;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 black;
+	color: #E4E4E4;
+}
+
+ul, menu, dir {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+}
+
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
+	argin-bottom: 20px;
+}
+
 ul li a {
   color:white;
   font-size:1.1em;
@@ -169,10 +224,15 @@ ol, ul {
 	list-style-image: initial;
 }
 
+li {
+	margin-left: 30px;
+}
+
 a {
   color:#1E6199;
   text-decoration:none;
 }
+
 
 body {
 	background: #303030 url(/images/header-background.png) top left repeat;
@@ -271,6 +331,10 @@ h1 {
 	font-size: 25px;
 }
 
+ul, menu, dir {
+	list-style-type: disc;
+}
+
 #container #content, #container footer, #container #flash-messages {
 	display: inline;
 	float: left;
@@ -279,6 +343,19 @@ h1 {
 	padding-left: 120px;
 	padding-right: 120px;
 	width: 700px;
+}
+
+footer {
+	text-align: center;
+	margin: 2em auto .5em;
+	margin-top: 2em;
+	margin-right: auto;
+	margin-bottom: 0.5em;
+	margin-left: auto;
+}
+
+article, aside, footer, header, hgroup, nav, section {
+	display: block;
 }
 
 #content #inner-content section.content p {
