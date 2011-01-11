@@ -16,7 +16,7 @@ header nav#header-menu {
 	background-color: initial;
 	-moz-box-shadow: black 0 0 .5em 0;
 	-webkit-box-shadow: black 0 0 .5em 0;
-	-o-box-shadow: black 0 0 .5em 0;
+	-o-box-shadow: black 0 0 .psot-s5em 0;
 	box-shadow: black 0 0 .5em 0;
 	background-image: -webkit-gradient(linear,0% 100%,0% 0,color-stop(0%,#222),color-stop(100%,#444));
 	background-image: -moz-linear-gradient(bottom,#222 0,#444 100%);
@@ -198,6 +198,13 @@ p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
 	argin-bottom: 20px;
 }
 
+ul {
+	list-style: square;
+	list-style-type: square;
+	list-style-position: initial;
+	list-style-image: initial;
+}
+
 ul li a {
   color:white;
   font-size:1.1em;
@@ -208,13 +215,6 @@ ul li a {
   margin-top:0;
   text-shadow:black 2px 2px 0;
   text-transform:lowercase;
-}
-
-ul {
-	list-style: square;
-	list-style-type: square;
-	list-style-position: initial;
-	list-style-image: initial;
 }
 
 ol, ul {
@@ -323,10 +323,6 @@ article, aside, footer, header, hgroup, nav, section {
 	text-align: center;
 }
 
-p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
-	margin-bottom: 20px;
-}
-
 h1 {
 	font-size: 25px;
 }
@@ -356,6 +352,10 @@ footer {
 
 article, aside, footer, header, hgroup, nav, section {
 	display: block;
+}
+
+footer nav ul li a:hover {
+  color: #C97E41;
 }
 
 #content #inner-content section.content p {
@@ -388,18 +388,20 @@ hr {
   clear:both;
   height:0;
 }
-base.css...292318402
+
 #content #inner-content hr.post-spacer, #content #inner-content hr.project-spacer {
-  background-color:#666666;
-  border-bottom-color:#666666;
-  border-left-color:#666666;
-  border-right-color:#666666;
-  border-top-color:#666666;
-  color:#666666;
-  margin-bottom:0.5em;
-  margin-left:0;
-  margin-right:0;
-  margin-top:0.5em;
+  background-color: #666;
+  border-color: #666;
+  border-top-color: #666;
+  border-right-color: #666;
+  border-bottom-color: #666;
+  border-left-color: #666;
+  color: #666;
+  margin: 0.5em 0px;
+  margin-top: 0.5em;
+  margin-right: 0px;
+  margin-bottom: 0.5em;
+  margin-left: 0px;
 }
 
 textarea {
@@ -444,4 +446,16 @@ textarea {
 	width: 99%;
 	height: 120px;
 }
+ 
+footer p#copyright-statement {
+  color: #CECECE;
+  font-size: 0.8em;
+  margin: 1.5em 0px 0.5em;
+  margin-top: 1.5em;
+  margin-right: 0px;
+  margin-bottom: 0.5em;
+  margin-left: 0px;
+  text-shadow: black 1px 1px 0px;
+}
+
 

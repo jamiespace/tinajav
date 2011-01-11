@@ -14127,3 +14127,195 @@ ActionController::RoutingError (No route matches "/images/themes/narcissus/input
   
 
 Rendered /home/tin/.rvm/gems/ruby-1.8.7-p302@rails300/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 10:34:42 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (175.2ms)
+Completed 200 OK in 443ms (Views: 216.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 10:39:45 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (123.3ms)
+Completed 200 OK in 391ms (Views: 180.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 10:41:06 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 73ms (Views: 45.2ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 10:41:06 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 23ms (Views: 14.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 10:49:40 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 51ms (Views: 30.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 10:49:40 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 23ms (Views: 15.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 10:55:45 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 52ms (Views: 31.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 10:55:45 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 28ms (Views: 18.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 10:57:45 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 33ms (Views: 22.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:00:09 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 153ms (Views: 39.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:00:10 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 32ms (Views: 19.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:00:11 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 34ms (Views: 22.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:00:16 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 35ms (Views: 23.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:01:32 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (95.3ms)
+Completed 200 OK in 122ms (Views: 108.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:01:38 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 48ms (Views: 26.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:01:46 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 48ms (Views: 35.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:02:09 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 45ms (Views: 26.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:02:20 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 36ms (Views: 23.6ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:02:30 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 39ms (Views: 23.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:02:38 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 36ms (Views: 22.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:04:51 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (87.5ms)
+Completed 200 OK in 107ms (Views: 95.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:05:25 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 38ms (Views: 25.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:05:54 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+Rendered home/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 37ms (Views: 23.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jan 11 11:06:05 +0700 2011
+  Processing by HomeController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered home/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 33ms (Views: 21.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Tue Jan 11 11:06:37 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered posts/_post_comments.html.erb (0.7ms)
+Rendered posts/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 203ms (Views: 32.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at Tue Jan 11 11:08:32 +0700 2011
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered posts/_post_comments.html.erb (0.7ms)
+Rendered posts/show.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 59ms (Views: 25.2ms | ActiveRecord: 1.5ms)
