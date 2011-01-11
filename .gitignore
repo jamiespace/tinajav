@@ -1,2 +1,2 @@
 log/*
-development/*.sqlite3
+db/*.sqlite3
