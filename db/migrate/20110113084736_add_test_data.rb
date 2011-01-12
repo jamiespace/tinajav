@@ -1,0 +1,16 @@
+class AddTestData < ActiveRecord::Migration
+  def self.up
+    Post.delete_all
+    Post.create(:title => "Pulvinar", :content => "Mauris sed dapibus velit. Vivamus molestie commodo enim sit amet porta. Curabitur pharetra, metus sed venenatis tempus, metus mi auctor lorem, venenatis egestas quam risus quis ante. Quisque tincidunt iaculis orci, eu egestas nisl mollis id. <h1>Sed id lacus quam</h1> <br/>sit amet dignissim nibh. Praesent dapibus lectus vehicula magna tempor sit amet porta mi suscipit. Aenean cursus pulvinar diam, facilisis fringilla enim cursus non. Curabitur luctus mollis nunc ut vulputate. Sed ac accumsan ligula. Vivamus convallis, sem vitae vestibulum semper, diam felis imperdiet ipsum, in iaculis sem urna at sem. Phasellus nibh urna, tempor et fringilla ac, rutrum ac nisl. Duis venenatis porttitor nisl, non venenatis turpis ultricies vitae. Sed eu nunc sem, in fermentum lectus. Praesent adipiscing mi at orci auctor rutrum. Vivamus sed commodo elit. Etiam bibendum turpis non mi porttitor mollis.", :dash_url => "pul-vinar")
+    Post.create(:title => "Mauris", :content => "Fusce volutpat pellentesque metus vitae placerat. Quisque ullamcorper auctor eleifend. Mauris tristique magna eget nunc pellentesque non congue nulla consectetur. Fusce eget lacus neque, id sollicitudin justo. Aliquam ullamcorper, risus id scelerisque imperdiet, <h1>Velit velit commodo libero</h1><br/> eu adipiscing purus eros ut ligula. Sed vitae arcu ante. Vivamus sagittis metus tempus lacus pulvinar et fermentum neque placerat. Maecenas non tellus enim, in tempor ligula. Sed sodales velit vitae turpis mattis elementum. Duis tristique massa a elit porttitor accumsan. Phasellus euismod tincidunt posuere. Vivamus quis urna nunc. Nam viverra sagittis libero nec dapibus. Vestibulum auctor sapien sed quam adipiscing scelerisque tincidunt purus imperdiet. Integer ultricies nisl malesuada massa mattis vitae porta ipsum dictum.", :dash_url => "mau-ris")
+    Post.create(:title => "Nunc", :content => "Duis imperdiet aliquam nunc non varius. In hac habitasse platea dictumst. Morbi sit amet lacus ipsum, a volutpat mauris. Praesent lacinia metus vel ligula aliquam et gravida leo cursus. Pellentesque sodales semper erat, et vulputate massa faucibus non. Maecenas vulputate consequat augue nec imperdiet. Mauris non eros enim, sed semper nibh. Sed semper molestie diam, sed hendrerit est commodo nec. <h1>Sed semper</h1><br/> est nec viverra fermentum, libero mauris vehicula elit, vitae feugiat libero nulla at nisl. Maecenas tempus libero in enim viverra vel placerat diam facilisis. Suspendisse pulvinar, enim sed tempor dignissim, ante est ullamcorper leo, eu convallis est ligula quis lacus. Vestibulum eleifend, sem eget iaculis placerat, risus nisl tempus massa, eget rhoncus magna risus in sem. Aliquam a orci nisi. Donec lorem neque, consequat ut pharetra congue, aliquet eget quam. Quisque quis eros sapien. Cras ullamcorper diam facilisis lorem convallis aliquet. In porttitor tristique est laoreet lacinia.", :dash_url => "nunc")
+
+    User.delete_all
+    User.create(:name => "admin", :password => "tin", :password_confirmation => "tin")
+  end
+
+  def self.down
+    Product.delete_all
+    User.delete_all
+  end
+end
