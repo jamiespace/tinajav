@@ -1,11 +1,11 @@
 header nav#header-menu {
 	display: block;
-	padding: .75em 0;
-	padding-top: 0.75em;
+	padding: 0.5em 0;
+	padding-top: 0.5em;
 	padding-right: 0px;
-	padding-bottom: 0.75em;
+	padding-bottom: 0.5em;
 	padding-left: 0px;
-	background: url(/images/header-background.png) center center repeat-x;
+	background: url(/public/images/header-background.png) center center repeat-x;
 	background-repeat-x: repeat;
 	background-repeat-y: no-repeat;
 	background-attachment: initial;
@@ -25,26 +25,10 @@ header nav#header-menu {
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	margin: 0;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding: 0;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
+	padding: 0;	
 	border: 0;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
-	border-style: initial;
-	border-color: initial;
-	outline: 0;
-	outline-width: 0px;
-	outline-style: initial;
-	outline-color: initial;
+	border: 0px;
+	outline: 0px;	
 	font-weight: inherit;
 	font-style: inherit;
 	font-size: 100%;
@@ -195,7 +179,7 @@ ul, menu, dir {
 }
 
 p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
-	argin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
 ul {
@@ -233,20 +217,27 @@ a {
   text-decoration:none;
 }
 
+body {
+ line-height:1;color:black;
+  background:white;
+}
 
 body {
-	background: #303030 url(/images/header-background.png) top left repeat;
-	background-image: url(/images/background.jpg);
-	background-repeat-x: repeat;
-	background-repeat-y: repeat;
-	background-attachment: initial;
-	background-position-x: 0%;
-	background-position-y: 0%;
-	background-origin: initial;
-	background-clip: initial;
-	background-color: #303030;
-	color: white;
-	min-width: 960px;
+  font:13px/1.5 Helvetica,Arial,'Liberation Sans',FreeSans,sans-serif;
+}
+
+a:focus{outline:1px dotted invert;}
+a:active { color: #1A3453;}
+a:hover { color: ##995140;}
+a:hover { text-decoration: underline;}
+a {
+  color: #1E6199;
+  text-decoration: none;
+}
+  
+
+body {
+  background:#303030 url(/images/background.jpg) top left repeat;color:white;min-width:960px;
 }
 
 div#header {
@@ -323,8 +314,24 @@ article, aside, footer, header, hgroup, nav, section {
 	text-align: center;
 }
 
+#content #inner-content h2.post-title a, #content #inner-content h2.project-title a {
+  color: white;
+  margin: 0.5em 0px 0.25em;
+}
+
 h1 {
 	font-size: 25px;
+}
+
+h2 {
+  font-size: 23px;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.83em 0px; 
 }
 
 ul, menu, dir {
@@ -359,17 +366,8 @@ footer nav ul li a:hover {
 }
 
 #content #inner-content section.content p {
-	color: #EEE;
-	margin: 1em 0;
-	margin-top: 1em;
-	margin-right: 0px;
-	margin-bottom: 1em;
-	margin-left: 0px;
-}
-
-#content #inner-content section.content p, #content #inner-content section.content li, #content #inner-content section.content ol {
-	font-size: 1.1em;
-	line-height: 1.8em;
+  color: #EEE;
+  margin: 1em 0px;
 }
 
 hr {
@@ -420,11 +418,7 @@ textarea {
 
 p {
 	display: block;
-	margin: 1em 0px;
-	margin-top: 1em;
-	margin-right: 0px;
-	margin-bottom: 1em;
-	margin-left: 0px;
+  margin: 1em 0px;
 }
 
 textarea.placeholder {
