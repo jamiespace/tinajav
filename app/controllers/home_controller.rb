@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-		@posts = Post.find(:all)
+		@posts = Post.paginate :page => params[:page], :order => "created_at DESC"
   end
 
 end
