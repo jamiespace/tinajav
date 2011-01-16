@@ -1,4 +1,4 @@
 tmp/*
 log/*
-*.sqlite3
+db/*.sqlite3
 .bundle
