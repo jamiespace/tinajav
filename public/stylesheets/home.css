@@ -107,14 +107,36 @@ header h1 a {
 	display: block;
 	text-indent: -1000em;
 	width: 433px;
-	height: 100px;
+	height: 70px;
 	margin: 0 auto;
 	margin-top: 0px;
 	margin-right: auto;
 	margin-bottom: 0px;
 	margin-left: auto;
-	background: url(/images/joe.gif) center center no-repeat;
-	background-image: url(/images/joe.gif);
+	background: url(/images/tinosaru.png) center center no-repeat;
+	background-image: url(/images/tinosaru.png);
+	background-repeat-x: no-repeat;
+	background-repeat-y: no-repeat;
+	background-attachment: initial;
+	background-position-x: 50%;
+	background-position-y: 30%;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: initial;
+}
+
+header h4 a {
+	display: block;
+	text-indent: -1000em;
+	width: 433px;
+	height: 25px;
+	margin: 0 auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background: url(/images/tinnguyenblog.png) center center no-repeat;
+	background-image: url(/images/tinnguyenblog.png);
 	background-repeat-x: no-repeat;
 	background-repeat-y: no-repeat;
 	background-attachment: initial;
@@ -246,7 +268,11 @@ a {
   
 
 body {
-  background:#303030 url(/images/background.jpg) top left repeat;color:white;min-width:960px;
+  	background:#303030 url(/images/gradient46747666.png) top left repeat;color:white;min-width:960px;
+		-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; 
 }
 
 div#header {
@@ -461,4 +487,13 @@ footer p#copyright-statement {
   text-shadow: black 1px 1px 0px;
 }
 
+#tweet-author {
+	display: none;
+	font-size: .85em;
+	color: #DDD;
+	text-align: center;
+	font-weight: bold;
+	padding: .25em 0 .5em;
+	text-shadow: black 1px 1px 1px;
+}
 
