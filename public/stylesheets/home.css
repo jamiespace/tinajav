@@ -113,8 +113,8 @@ header h1 a {
 	margin-right: auto;
 	margin-bottom: 0px;
 	margin-left: auto;
-	background: url(/images/tinosaru.png) center center no-repeat;
-	background-image: url(/images/tinosaru.png);
+	background: url(/images/fuover.png) center center no-repeat;
+	background-image: url(/images/fuover.png);
 	background-repeat-x: no-repeat;
 	background-repeat-y: no-repeat;
 	background-attachment: initial;
@@ -268,11 +268,9 @@ a {
   
 
 body {
-  	background:#303030 url(/images/gradient46747666.png) top left repeat;color:white;min-width:960px;
-		-webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover; 
+  	background:#303030 url(/images/background.jpg) top left repeat;
+		color: white;
+		min-width: 960px; 
 }
 
 div#header {

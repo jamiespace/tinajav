@@ -16,8 +16,11 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.xml
   def show
-		@post = Post.find_by_id(params[:id])
-		@current_user = User.find_by_id(session[:user_id])	    
+		@current_user = User.find_by_id(session[:user_id])
+		if @current_user != nil
+			@post = Post.find_by_id(params[:id])
+		else @post = Post.find_by_dash_url(params[:id])
+		end	    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @post }
