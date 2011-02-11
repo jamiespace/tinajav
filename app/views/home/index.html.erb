@@ -6,7 +6,7 @@
         <% for post in @posts %>
         <article class="post" id=<%= post.id %>>
           <div class="article">
-          <h2 class="post-title"><%= link_to post.title, post_path(post.dash_url) %></h2>
+					<h2 class="post-title"><%= link_to post.title, post_path(post.id)%></h2>
 					<p class="post-metadata">Posted <%= post.posted_for %></p>
           <%= hidden_field(:post, :dash_url) %>
           <section class="content summary">

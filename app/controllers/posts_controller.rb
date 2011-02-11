@@ -2,19 +2,22 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.all
 		@current_user = User.find_by_id(session[:user_id])
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @posts }
+		if @current_user
+	    @posts = Post.all
+			respond_to do |format|
+      	format.html # index.html.erb
+			end
+		else
+			redirect_to(:controller => "home", :action => "index")
     end
   end
 
   # GET /posts/1
   # GET /posts/1.xml
   def show
-    @post = Post.find_by_dash_url(params[:id])
-		@current_user = User.find_by_id(session[:user_id])
+		@post = Post.find_by_id(params[:id])
+		@current_user = User.find_by_id(session[:user_id])	    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @post }
@@ -34,7 +37,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find_by_id(params[:id])
 		@current_user = User.find_by_id(session[:user_id])
   end
 
